@@ -46,7 +46,7 @@ The options in detail:
 - `port`: The port at which the server will be booted to prerender the pages.
 - `viewportWidth` / `viewportHeight`: Puppeteer will prerender at this viewport size.
 
-For details on prerendering and more complex usage, see [ember-prerender](./../ember-prerender/README.md).
+For details on prerendering and more complex usage, see [ember-build-prerender](./../ember-build-prerender/README.md).
 
 ### `urlFetcher`
 

@@ -2,10 +2,10 @@ node_modules
 tmp
 dist
 .eslintcache
-packages/ember-prerender/node_modules
-packages/ember-prerender/dist
-packages/ember-prerender/tmp
-packages/ember-prerender/vendor
+packages/ember-build-prerender/node_modules
+packages/ember-build-prerender/dist
+packages/ember-build-prerender/tmp
+packages/ember-build-prerender/vendor
 packages/test-app/node_modules
 packages/test-app/dist
 packages/test-app/tmp

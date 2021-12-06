@@ -1,7 +1,7 @@
 const glob = require('glob');
 const DeployPluginBase = require('ember-cli-deploy-plugin');
 const path = require('path');
-const Prerender = require('ember-prerender/lib/utils/prerender');
+const Prerender = require('ember-build-prerender/lib/utils/prerender');
 
 module.exports = {
   name: require('./package').name,

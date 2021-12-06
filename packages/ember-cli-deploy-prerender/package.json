@@ -6,7 +6,7 @@
     "ember-addon",
     "ember-cli-deploy-plugin"
   ],
-  "repository": "https://github.com/mydea/ember-prerender/tree/main/packages/ember-cli-deploy-prerender",
+  "repository": "https://github.com/mydea/ember-build-prerender/tree/main/packages/ember-cli-deploy-prerender",
   "license": "MIT",
   "author": "Francesco Novy <francesconovy@gmail.com>",
   "directories": {
@@ -20,7 +20,7 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "ember-cli-deploy-plugin": "^0.2.1",
-    "ember-prerender": "0.1.0",
+    "ember-build-prerender": "0.1.0",
     "glob": "^7.1.1"
   },
   "devDependencies": {

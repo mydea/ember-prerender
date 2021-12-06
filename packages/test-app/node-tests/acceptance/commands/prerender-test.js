@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs-extra');
 const Command = require('ember-cli/lib/models/command');
 const MockUI = require('console-ui/mock'); // eslint-disable-line
-const PrerenderCommand = require('ember-prerender/lib/commands/prerender');
+const PrerenderCommand = require('ember-build-prerender/lib/commands/prerender');
 const MockBuilder = require('./../../utils/mock-builder');
 const glob = require('glob');
 

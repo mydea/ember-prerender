@@ -1,20 +1,18 @@
 {
-  "name": "ember-prerender",
+  "name": "ember-build-prerender",
   "version": "0.1.0",
   "description": "Prerender Ember pages with Puppeeter.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "https://github.com/mydea/ember-prerender/tree/main/packages/ember-prerender",
+  "repository": "https://github.com/mydea/ember-build-prerender/tree/main/packages/ember-build-prerender",
   "license": "MIT",
   "author": "Francesco Novy <francesconovy@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "scripts": {
-    "test:node": "mocha node-tests/index-test.js"
-  },
+  "scripts": {},
   "dependencies": {
     "chalk": "^4.1.2",
     "ember-cli-babel": "^7.26.6",

@@ -4,7 +4,7 @@
   "private": true,
   "repository": "https://github.com/mydea/ember-prerender",
   "workspaces": [
-    "packages/ember-prerender",
+    "packages/ember-build-prerender",
     "packages/ember-cli-deploy-prerender",
     "packages/test-app"
   ],

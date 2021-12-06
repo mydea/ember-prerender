@@ -1,4 +1,4 @@
-# ember-prerender
+# ember-build-prerender
 
 An addon to prerender your Ember app with [Puppeteer](https://pptr.dev/) into static HTML files.
 
@@ -11,7 +11,7 @@ An addon to prerender your Ember app with [Puppeteer](https://pptr.dev/) into st
 ## Installation
 
 ```
-ember install ember-prerender
+ember install ember-build-prerender
 ```
 
 ## Usage
