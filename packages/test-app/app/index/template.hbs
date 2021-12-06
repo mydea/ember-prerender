@@ -1,0 +1,36 @@
+<h2>
+  Index page
+</h2>
+
+<ul>
+  <li>
+    <LinkTo @route='index'>Index page</LinkTo>
+  </li>
+  <li>
+    <LinkTo @route='page-1'>Page 1</LinkTo>
+  </li>
+  <li>
+    <LinkTo @route='page-2.index'>Page 2</LinkTo>
+  </li>
+  <li>
+    <LinkTo @route='page-2.sub-page'>Sub page of Page 2</LinkTo>
+  </li>
+  {{#each (array 1 2 3 4 5) as |num|}}
+    <li>
+      <LinkTo @route='numbers.show' @model={{num}}>
+        Number page
+        {{num}}
+      </LinkTo>
+    </li>
+  {{/each}}
+</ul>
+
+<div>
+  <img src='/assets/vienna.jpg' alt='Vienna' />
+</div>
+
+<div>
+  <Button />
+</div>
+
+<IsPrerendered />

@@ -1,0 +1,12 @@
+node_modules
+tmp
+dist
+.eslintcache
+packages/ember-prerender/node_modules
+packages/ember-prerender/dist
+packages/ember-prerender/tmp
+packages/ember-prerender/vendor
+packages/test-app/node_modules
+packages/test-app/dist
+packages/test-app/tmp
+packages/test-app/node-tests/fixtures

@@ -1,0 +1,65 @@
+{
+  "name": "test-app",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A test app to test prerendering.",
+  "repository": "",
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "ember build --environment=production",
+    "start": "ember serve",
+    "prerender": "ember prerender --url-fetcher=\"./lib/url-fetcher.js\"",
+    "test:node": "node node-tests/index.js",
+    "test:dev": "_TEST_SHOULD_PRERENDER=false ember test",
+    "test:prerender": "_TEST_SHOULD_PRERENDER=true PRERENDER=true ember test",
+    "test:rehydrate": "_TEST_SHOULD_PRERENDER=false ember prerender --environment=development &&  ember test --path=dist",
+    "test:ember": "yarn test:dev && yarn test:prerender && yarn test:rehydrate"
+  },
+  "devDependencies": {
+    "@ember/optional-features": "~2.0.0",
+    "@ember/test-helpers": "~2.4.2",
+    "@glimmer/component": "~1.0.4",
+    "@glimmer/tracking": "~1.0.4",
+    "broccoli-asset-rev": "~3.0.0",
+    "chai": "~4.3.4",
+    "ember-auto-import": "~1.11.3",
+    "ember-cli": "~3.28.4",
+    "ember-cli-app-version": "~5.0.0",
+    "ember-cli-babel": "~7.26.6",
+    "ember-cli-dependency-checker": "~3.2.0",
+    "ember-cli-htmlbars": "~5.7.1",
+    "ember-cli-inject-live-reload": "~2.1.0",
+    "ember-cli-sri": "~2.1.1",
+    "ember-cli-terser": "~4.0.2",
+    "ember-export-application-global": "~2.0.1",
+    "ember-load-initializers": "~2.1.2",
+    "ember-page-title": "~6.2.2",
+    "ember-prerender": "*",
+    "ember-qunit": "~5.1.5",
+    "ember-resolver": "~8.0.2",
+    "ember-source": "~3.28.0",
+    "fs-extra": "~10.0.0",
+    "glob": "^7.2.0",
+    "loader.js": "~4.7.0",
+    "mocha": "~9.1.3",
+    "qunit": "~2.17.2",
+    "qunit-dom": "~2.0.0"
+  },
+  "engines": {
+    "node": "14.* || >= 16"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

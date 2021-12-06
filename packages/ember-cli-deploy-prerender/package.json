@@ -1,0 +1,38 @@
+{
+  "name": "ember-cli-deploy-prerender",
+  "version": "0.0.0",
+  "description": "A plugin for ember-cli-deploy to prerender pages as static HTML.",
+  "keywords": [
+    "ember-addon",
+    "ember-cli-deploy-plugin"
+  ],
+  "repository": "https://github.com/mydea/ember-prerender/tree/main/packages/ember-cli-deploy-prerender",
+  "license": "MIT",
+  "author": "Francesco Novy <francesconovy@gmail.com>",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "lint:js": "eslint .",
+    "test": "mocha tests/**/*-test.js --exit"
+  },
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "ember-cli-deploy-plugin": "^0.2.1",
+    "ember-prerender": "*",
+    "glob": "^7.1.1"
+  },
+  "devDependencies": {
+    "@ember/optional-features": "^0.7.0",
+    "ember-cli": "~3.12.0",
+    "loader.js": "^4.7.0"
+  },
+  "engines": {
+    "node": "14.* || >= 16"
+  },
+  "ember-addon": {},
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

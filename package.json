@@ -1,0 +1,47 @@
+{
+  "version": "0.8.1",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/mydea/ember-prerender",
+  "workspaces": [
+    "packages/ember-prerender",
+    "packages/ember-cli-deploy-prerender",
+    "packages/test-app"
+  ],
+  "scripts": {
+    "lint:js": "eslint . --cache",
+    "test:node": "yarn --cwd ./packages/test-app test:node",
+    "test:ember": "yarn --cwd ./packages/test-app test:ember"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "~7.16.3",
+    "eslint": "~8.3.0",
+    "fabscale-eslint-config": "~1.2.0",
+    "prettier": "~2.5.0",
+    "release-it": "~14.11.8",
+    "release-it-lerna-changelog": "~4.0.1",
+    "release-it-yarn-workspaces": "~2.0.1"
+  },
+  "engines": {
+    "node": ">= 14"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md"
+      },
+      "release-it-yarn-workspaces": {}
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": false
+  },
+  "volta": {
+    "node": "16.13.0",
+    "yarn": "1.22.17"
+  }
+}

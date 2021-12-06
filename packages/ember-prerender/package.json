@@ -1,0 +1,62 @@
+{
+  "name": "ember-prerender",
+  "version": "0.0.0",
+  "description": "Prerender Ember pages with Puppeeter.",
+  "keywords": [
+    "ember-addon"
+  ],
+  "repository": "https://github.com/mydea/ember-prerender/tree/main/packages/ember-prerender",
+  "license": "MIT",
+  "author": "Francesco Novy <francesconovy@gmail.com>",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test:node": "mocha node-tests/index-test.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ember-cli-babel": "^7.26.6",
+    "fs-extra": "^10.0.0",
+    "http-server": "^14.0.0",
+    "puppeteer": "^12.0.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "~7.16.3",
+    "@ember/optional-features": "~2.0.0",
+    "@ember/test-helpers": "~2.6.0",
+    "@embroider/compat": "^0.47.2",
+    "@embroider/core": "^0.47.2",
+    "@embroider/webpack": "^0.47.2",
+    "ember-auto-import": "~2.2.4",
+    "ember-cli": "~3.28.4",
+    "ember-cli-dependency-checker": "~3.2.0",
+    "ember-cli-htmlbars": "~6.0.0",
+    "ember-cli-inject-live-reload": "~2.1.0",
+    "ember-cli-sri": "~2.1.1",
+    "ember-cli-terser": "~4.0.2",
+    "ember-disable-prototype-extensions": "~1.1.3",
+    "ember-export-application-global": "~2.0.1",
+    "ember-load-initializers": "~2.1.2",
+    "ember-resolver": "~8.0.3",
+    "ember-source": "~3.28.0",
+    "loader.js": "~4.7.0",
+    "webpack": "^5.64.4"
+  },
+  "engines": {
+    "node": "14.* || >= 16"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
