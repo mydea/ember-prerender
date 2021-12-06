@@ -63,10 +63,7 @@ class PageVisitor {
       throw error;
     }
 
-    /* global document */
-    let pageContent = await page.evaluate(
-      () => document.documentElement.innerHTML
-    );
+    let pageContent = await page.content();
 
     if (!pageContent) {
       page.close();

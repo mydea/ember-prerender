@@ -59,9 +59,9 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
-      'assets/test-app-0b7b53bffa7c2d30675b0459926d6cb5.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/vendor-bc5faef3340750f1a5942dffc6110a23.js',
+      'assets/test-app-e6f4803c0665a8d7a44e35c5f1e821ee.js',
+      'assets/vendor-8ff1b60bcef19b374ec2c73a8d031624.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
@@ -69,9 +69,9 @@ describe('prerender command', function () {
       'robots.txt',
     ]);
 
-    fileIsExpected(outputPath, '_empty.html');
-    fileIsExpected(outputPath, 'index.html');
-    fileIsExpected(outputPath, 'page-1/index.html');
+    await fileIsExpected(outputPath, '_empty.html');
+    await fileIsExpected(outputPath, 'index.html');
+    await fileIsExpected(outputPath, 'page-1/index.html');
   });
 
   it('it correctly prerenders the pages from an urlFetcher module name', async function () {
@@ -89,9 +89,9 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
-      'assets/test-app-0b7b53bffa7c2d30675b0459926d6cb5.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/vendor-bc5faef3340750f1a5942dffc6110a23.js',
+      'assets/test-app-e6f4803c0665a8d7a44e35c5f1e821ee.js',
+      'assets/vendor-8ff1b60bcef19b374ec2c73a8d031624.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
@@ -106,13 +106,13 @@ describe('prerender command', function () {
       'robots.txt',
     ]);
 
-    fileIsExpected(outputPath, '_empty.html');
-    fileIsExpected(outputPath, 'index.html');
-    fileIsExpected(outputPath, 'page-1/index.html');
-    fileIsExpected(outputPath, 'numbers/1/index.html');
-    fileIsExpected(outputPath, 'numbers/2/index.html');
-    fileIsExpected(outputPath, 'page-2/index.html');
-    fileIsExpected(outputPath, 'page-2/sub-page/index.html');
+    await fileIsExpected(outputPath, '_empty.html');
+    await fileIsExpected(outputPath, 'index.html');
+    await fileIsExpected(outputPath, 'page-1/index.html');
+    await fileIsExpected(outputPath, 'numbers/1/index.html');
+    await fileIsExpected(outputPath, 'numbers/2/index.html');
+    await fileIsExpected(outputPath, 'page-2/index.html');
+    await fileIsExpected(outputPath, 'page-2/sub-page/index.html');
   });
 
   it('it works with full URLs', async function () {
@@ -129,9 +129,9 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
-      'assets/test-app-0b7b53bffa7c2d30675b0459926d6cb5.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/vendor-bc5faef3340750f1a5942dffc6110a23.js',
+      'assets/test-app-e6f4803c0665a8d7a44e35c5f1e821ee.js',
+      'assets/vendor-8ff1b60bcef19b374ec2c73a8d031624.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
@@ -139,16 +139,17 @@ describe('prerender command', function () {
       'robots.txt',
     ]);
 
-    fileIsExpected(outputPath, '_empty.html');
-    fileIsExpected(outputPath, 'index.html');
-    fileIsExpected(outputPath, 'page-1/index.html');
+    await fileIsExpected(outputPath, '_empty.html');
+    await fileIsExpected(outputPath, 'index.html');
+    await fileIsExpected(outputPath, 'page-1/index.html');
   });
 });
 
 async function fileIsExpected(outputPath, fileName) {
   let actualFile = await fs.readFile(path.join(outputPath, fileName), 'utf-8');
   let expectedFile = await fs.readFile(
-    path.join(process.cwd(), 'node-test/fixtures/expected', fileName)
+    path.join(process.cwd(), 'node-tests/fixtures/expected', fileName),
+    'utf-8'
   );
 
   expect(actualFile).to.equal(expectedFile, `${fileName} content is correct`);
