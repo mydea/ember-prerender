@@ -30,7 +30,12 @@
       "release-it-lerna-changelog": {
         "infile": "CHANGELOG.md"
       },
-      "release-it-yarn-workspaces": {}
+      "release-it-yarn-workspaces": {
+        "workspaces": [
+          "packages/ember-build-prerender",
+          "packages/ember-cli-deploy-prerender"
+        ]
+      }
     },
     "git": {
       "tagName": "v${version}"
