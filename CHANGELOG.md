@@ -1,6 +1,16 @@
 
 
 
+
+## v0.2.0 (2021-12-07)
+
+#### :rocket: Enhancement
+* `ember-build-prerender`, `test-app`
+  * [#10](https://github.com/mydea/ember-prerender/pull/10) Allow to store data between prerender and rehydration in shoebox ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v0.1.4 (2021-12-07)
 
 #### :bug: Bug Fix
