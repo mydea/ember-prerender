@@ -201,7 +201,7 @@ class Prerender {
     });
 
     let urls = (this.urls || []).concat(newUrls);
-    this.urls = urls;
+    this.urls = [...new Set(urls)];
 
     page.close();
     ui.stopProgress();
