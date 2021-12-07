@@ -3839,7 +3839,9 @@ e.cast=he
 var pe=(e,t)=>i.async(e,t)
 function fe(){i.on(...arguments)}function me(){i.off(...arguments)}if(e.async=pe,"undefined"!=typeof window&&"object"==typeof window.__PROMISE_INSTRUMENTATION__){var ve=window.__PROMISE_INSTRUMENTATION__
 for(var ge in a("instrument",!0),ve)ve.hasOwnProperty(ge)&&fe(ge,ve[ge])}var be={asap:K,cast:he,Promise:R,EventTarget:n,all:k,allSettled:j,race:N,hash:D,hashSettled:L,rethrow:U,defer:B,denodeify:C,configure:a,on:fe,off:me,resolve:$,reject:H,map:z,async:pe,filter:Y}
-e.default=be})),t("@ember/-internals/bootstrap")}(),define("@ember/test-waiters/build-waiter",["exports","@ember/debug","@ember/test-waiters/token","@ember/test-waiters/waiter-manager"],(function(e,t,r,n){"use strict"
+e.default=be})),t("@ember/-internals/bootstrap")}(),function(){function e(e){require("ember").default.ApplicationInstance.reopen({_bootSync:function(t){return void 0===t&&(t={_renderMode:e}),this._super(t)}})}let t=document.querySelector('meta[name="prerender-config"]')
+if(t&&t.hasAttribute("stage"))return"should-prerender"===t.getAttribute("stage")?(e("serialize"),void t.setAttribute("stage","prerender")):(e("rehydrate"),void t.setAttribute("stage","rehydrated"))
+console.error("Could not find prerender config, although PRERENDER has been enabled.")}(),define("@ember/test-waiters/build-waiter",["exports","@ember/debug","@ember/test-waiters/token","@ember/test-waiters/waiter-manager"],(function(e,t,r,n){"use strict"
 function i(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}Object.defineProperty(e,"__esModule",{value:!0}),e._resetWaiterNames=function(){a=new Set},e.default=function(e){0
 return new l(e)
 return new o(e)}
@@ -4011,9 +4013,9 @@ return 0===t.indexOf(o)&&t.length>o.length?e+":"+t.slice(o.length):void 0},_extr
 return t&&t.default&&(t=t.default),t}})
 o.reopenClass({moduleBasedResolver:!0})
 var l=o
-e.default=l})),define("ember-resolver/utils/class-factory",["exports"],(function(e){"use strict"
-Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e){return{create:t=>"function"==typeof e.extend?e.extend(t):e}}}))
-define("ember-test-waiters/index",["exports","@ember/debug","@ember/test-waiters"],(function(e,t,r){"use strict"
+e.default=l}))
+define("ember-resolver/utils/class-factory",["exports"],(function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e){return{create:t=>"function"==typeof e.extend?e.extend(t):e}}})),define("ember-test-waiters/index",["exports","@ember/debug","@ember/test-waiters"],(function(e,t,r){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),Object.keys(r).forEach((function(t){"default"!==t&&"__esModule"!==t&&(t in e&&e[t]===r[t]||Object.defineProperty(e,t,{enumerable:!0,get:function(){return r[t]}}))}))}))
 var __ember_auto_import__=function(e){var t={}
 function r(n){if(t[n])return t[n].exports

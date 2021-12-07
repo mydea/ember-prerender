@@ -17,8 +17,7 @@
     "test:node": "node node-tests/index.js",
     "test:dev": "_TEST_SHOULD_PRERENDER=false ember test",
     "test:prerender": "_TEST_SHOULD_PRERENDER=true PRERENDER=true ember test",
-    "test:rehydrate": "_TEST_SHOULD_PRERENDER=false ember prerender --environment=development &&  ember test --path=dist",
-    "test:ember": "yarn test:dev && yarn test:prerender && yarn test:rehydrate"
+    "test:ember": "yarn test:dev && yarn test:prerender"
   },
   "devDependencies": {
     "@ember/optional-features": "~2.0.0",

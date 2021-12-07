@@ -59,10 +59,10 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
+      'assets/test-app-2cf0aa3042605f84142e2c723b702f5f.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/test-app-e6f4803c0665a8d7a44e35c5f1e821ee.js',
-      'assets/vendor-8ff1b60bcef19b374ec2c73a8d031624.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
+      'assets/vendor-dea3385c49eb2ba18e00fe3fc076c618.js',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
       'page-1/index.html',
@@ -89,10 +89,10 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
+      'assets/test-app-2cf0aa3042605f84142e2c723b702f5f.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/test-app-e6f4803c0665a8d7a44e35c5f1e821ee.js',
-      'assets/vendor-8ff1b60bcef19b374ec2c73a8d031624.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
+      'assets/vendor-dea3385c49eb2ba18e00fe3fc076c618.js',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
       'numbers/1/index.html',
@@ -129,10 +129,10 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
+      'assets/test-app-2cf0aa3042605f84142e2c723b702f5f.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/test-app-e6f4803c0665a8d7a44e35c5f1e821ee.js',
-      'assets/vendor-8ff1b60bcef19b374ec2c73a8d031624.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
+      'assets/vendor-dea3385c49eb2ba18e00fe3fc076c618.js',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
       'page-1/index.html',
@@ -148,7 +148,7 @@ describe('prerender command', function () {
 async function fileIsExpected(outputPath, fileName) {
   let actualFile = await fs.readFile(path.join(outputPath, fileName), 'utf-8');
   let expectedFile = await fs.readFile(
-    path.join(process.cwd(), 'node-tests/fixtures/expected', fileName),
+    path.join(process.cwd(), 'node-tests/fixtures/prerendered', fileName),
     'utf-8'
   );
 
