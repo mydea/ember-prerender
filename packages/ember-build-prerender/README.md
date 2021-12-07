@@ -79,6 +79,31 @@ export default class MyComponent extends Component {
 }
 ```
 
+The `prerender` service also provides a simple shoebox (similar to ember-cli-fastboot) to store & exchange data
+between the prerender and the rehydration phases:
+
+```js
+export default class MyComponent extends Component {
+  @service prerender;
+
+  async loadData() {
+    if (this.prerender.isPrerender) {
+      let data = await loadDataFromApi();
+      this.prerender.shoebox.set('api-data', data);
+      return data;
+    } else {
+      return this.prerender.shoebox.get('api-data');
+    }
+  }
+}
+```
+
+Any data you set via `shoebox.set()` will be JSON-stringified, and can be retreived with the same key via `shoebox.get()`.
+Note that you can _only_ set data in prerender mode. The shoebox will be stored in a meta tag in the document.
+
+Note that in dev mode the shoebox will be empty.
+So any non-prerender code should never rely on any shoebox content to exist, but instead treat it as optional.
+
 ## How it works
 
 ember-prerender basically works in four steps:
@@ -89,6 +114,16 @@ ember-prerender basically works in four steps:
 4. Merge the prerendered pages with the original build output, renaming the original `index.html` to `_empty.html`
 
 The app will rehydrate from the static HTML files, providing a smooth transition from the static page to a fully booted Ember app.
+
+## Difference to ember-cli-fastboot / prember
+
+In contrast to ember-cli-fastboot, this addon will prerender the app using a "regular" browser (Chrome via Puppeteer).
+This has the benefit of running all code normally - modifiers etc. will all run just like they do normally.
+
+The restriction is that this _only_ works for prerendering. You can not run this in production like ember-cli-fastboot.
+As such, it is only a possible replacement for [prember](https://github.com/ef4/prember), which uses fastboot to prerender your app.
+
+It uses the same serialization/rehydration code under the hood (which lives directly in Glimmer nowadays) as fastboot does.
 
 ## Integration into build/deployment process
 
@@ -103,3 +138,7 @@ See the [Contributing](CONTRIBUTING.md) guide for details.
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
+
+```
+
+```
