@@ -30,7 +30,10 @@ module.exports = {
     let prerenderEnabled = app.__PRERENDER_ENABLED;
 
     if (type === 'head' && prerenderEnabled) {
-      return '<meta name="prerender-config" content="should-prerender"></meta>';
+      return `<meta name="prerender-config" content="should-prerender"></meta>
+<meta name="prerender-shoebox" content="{}"></meta>`;
+    } else if (type === 'head') {
+      return '<meta name="prerender-shoebox" content="{}"></meta>';
     }
   },
 };
