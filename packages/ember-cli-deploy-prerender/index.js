@@ -37,6 +37,8 @@ module.exports = {
 
         let Builder = this.project.require('ember-cli/lib/models/builder');
 
+        process.env.PRERENDER = 'true';
+
         let builder = new Builder({
           ui: this.ui,
           outputPath,
