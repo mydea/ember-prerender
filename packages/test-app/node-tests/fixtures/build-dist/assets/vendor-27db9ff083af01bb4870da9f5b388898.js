@@ -3840,7 +3840,7 @@ var pe=(e,t)=>i.async(e,t)
 function fe(){i.on(...arguments)}function me(){i.off(...arguments)}if(e.async=pe,"undefined"!=typeof window&&"object"==typeof window.__PROMISE_INSTRUMENTATION__){var ve=window.__PROMISE_INSTRUMENTATION__
 for(var ge in a("instrument",!0),ve)ve.hasOwnProperty(ge)&&fe(ge,ve[ge])}var be={asap:K,cast:he,Promise:R,EventTarget:n,all:k,allSettled:j,race:N,hash:D,hashSettled:L,rethrow:U,defer:B,denodeify:C,configure:a,on:fe,off:me,resolve:$,reject:H,map:z,async:pe,filter:Y}
 e.default=be})),t("@ember/-internals/bootstrap")}(),function(){function e(e){require("ember").default.ApplicationInstance.reopen({_bootSync:function(t){return void 0===t&&(t={_renderMode:e}),this._super(t)}})}let t=document.querySelector('meta[name="prerender-config"]')
-if(t&&t.hasAttribute("stage"))return"should-prerender"===t.getAttribute("stage")?(e("serialize"),void t.setAttribute("stage","prerender")):(e("rehydrate"),void t.setAttribute("stage","rehydrated"))
+if(t&&t.hasAttribute("content"))return"should-prerender"===t.getAttribute("content")?(e("serialize"),void t.setAttribute("content","prerender")):(e("rehydrate"),void t.setAttribute("content","rehydrated"))
 console.error("Could not find prerender config, although PRERENDER has been enabled.")}(),define("@ember/test-waiters/build-waiter",["exports","@ember/debug","@ember/test-waiters/token","@ember/test-waiters/waiter-manager"],(function(e,t,r,n){"use strict"
 function i(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}Object.defineProperty(e,"__esModule",{value:!0}),e._resetWaiterNames=function(){a=new Set},e.default=function(e){0
 return new l(e)
@@ -3894,7 +3894,7 @@ let i=n.default;(0,t.setComponentManager)((e=>new r.default(e)),i)
 var a=i
 e.default=a})),define("ember-build-prerender/instance-initializers/prerender",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-var t={name:"prerender",initialize(e){let t=document.querySelector('meta[name="prerender-config"]')?.getAttribute("stage")
+var t={name:"prerender",initialize(e){let t=document.querySelector('meta[name="prerender-config"]')?.getAttribute("content")
 e.lookup("service:prerender")._stage=t}}
 e.default=t})),define("ember-build-prerender/instance-initializers/setup-rehydrate",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0

@@ -31,6 +31,16 @@ describe('serve prerendered app', function () {
     browser.close();
     server.close();
 
+    /* 
+    Use this to generate the expected file to compare to:
+    
+    await fs.writeFile(
+      path.join(process.cwd(), 'node-tests/fixtures/rehydrated/index.html'),
+      html,
+      'utf-8'
+    ); 
+    */
+
     await contentIsExpected(html, 'index.html');
   });
 });

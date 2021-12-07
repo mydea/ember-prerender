@@ -25,21 +25,21 @@
   let configElement = document.querySelector('meta[name="prerender-config"]');
 
   // if this does not exist, it is dev mode
-  if (!configElement || !configElement.hasAttribute('stage')) {
+  if (!configElement || !configElement.hasAttribute('content')) {
     console.error('Could not find prerender config, although PRERENDER has been enabled.');
     return;
   }
 
-  let stage = configElement.getAttribute('stage');
+  let stage = configElement.getAttribute('content');
 
   if (stage === 'should-prerender') {
     configureRenderMode('serialize');
 
-    configElement.setAttribute('stage', 'prerender');
+    configElement.setAttribute('content', 'prerender');
     return;
   }
 
   // Else, we are rehydrating a prerendered page
   configureRenderMode('rehydrate');
-  configElement.setAttribute('stage', 'rehydrated');
+  configElement.setAttribute('content', 'rehydrated');
 })();

@@ -59,10 +59,10 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
-      'assets/test-app-2cf0aa3042605f84142e2c723b702f5f.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
+      'assets/test-app-d26ef0cf73b7f17e2f0c18d954d66d03.js',
+      'assets/vendor-27db9ff083af01bb4870da9f5b388898.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
-      'assets/vendor-dea3385c49eb2ba18e00fe3fc076c618.js',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
       'page-1/index.html',
@@ -89,10 +89,10 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
-      'assets/test-app-2cf0aa3042605f84142e2c723b702f5f.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
+      'assets/test-app-d26ef0cf73b7f17e2f0c18d954d66d03.js',
+      'assets/vendor-27db9ff083af01bb4870da9f5b388898.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
-      'assets/vendor-dea3385c49eb2ba18e00fe3fc076c618.js',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
       'numbers/1/index.html',
@@ -129,10 +129,10 @@ describe('prerender command', function () {
 
     expect(files).to.deep.equals([
       '_empty.html',
-      'assets/test-app-2cf0aa3042605f84142e2c723b702f5f.js',
       'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
+      'assets/test-app-d26ef0cf73b7f17e2f0c18d954d66d03.js',
+      'assets/vendor-27db9ff083af01bb4870da9f5b388898.js',
       'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
-      'assets/vendor-dea3385c49eb2ba18e00fe3fc076c618.js',
       'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
       'index.html',
       'page-1/index.html',
