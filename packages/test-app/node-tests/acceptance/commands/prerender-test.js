@@ -148,7 +148,7 @@ describe('prerender command', function () {
 async function fileIsExpected(outputPath, fileName) {
   let actualFile = await fs.readFile(path.join(outputPath, fileName), 'utf-8');
   let expectedFile = await fs.readFile(
-    path.join(process.cwd(), 'node-tests/fixtures/expected', fileName),
+    path.join(process.cwd(), 'node-tests/fixtures/prerendered', fileName),
     'utf-8'
   );
 
