@@ -2,6 +2,19 @@
 
 
 
+
+## v0.2.1 (2021-12-07)
+
+#### :bug: Bug Fix
+* `ember-build-prerender`, `test-app`
+  * [#11](https://github.com/mydea/ember-prerender/pull/11) Ensure we remove the prerender config from the empty file ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* [#12](https://github.com/mydea/ember-prerender/pull/12) Skip test-app for release-it config ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v0.2.0 (2021-12-07)
 
 #### :rocket: Enhancement
