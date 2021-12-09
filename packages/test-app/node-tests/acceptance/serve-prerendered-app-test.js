@@ -31,17 +31,27 @@ describe('serve prerendered app', function () {
     browser.close();
     server.close();
 
-    /* 
-    Use this to generate the expected file to compare to:
-    
-    await fs.writeFile(
-      path.join(process.cwd(), 'node-tests/fixtures/rehydrated/index.html'),
-      html,
-      'utf-8'
-    ); 
-    */
-
     await contentIsExpected(html, 'index.html');
+  });
+
+  it('it correctly serves a fallback page', async function () {
+    let server = httpServer.createServer({ port: PORT, root: FIXTURE_PATH });
+    server.listen(PORT, 'localhost');
+
+    let browser = await puppeteer.launch();
+    let page = await browser.newPage();
+    page.setViewport({ width: 1280, height: 1024 });
+
+    await page.goto(`http://localhost:${PORT}/not-prerendered`, {
+      waitUntil: ['load', 'domcontentloaded', 'networkidle0'],
+    });
+
+    let html = await page.content();
+
+    browser.close();
+    server.close();
+
+    await contentIsExpected(html, 'not-prerendered.html');
   });
 });
 

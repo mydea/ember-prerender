@@ -58,18 +58,18 @@ describe('prerender command', function () {
     let files = glob.sync('**/*', { cwd: outputPath, nodir: true });
 
     expect(files).to.deep.equals([
-      '_empty.html',
-      'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/test-app-d26ef0cf73b7f17e2f0c18d954d66d03.js',
-      'assets/vendor-27db9ff083af01bb4870da9f5b388898.js',
-      'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
-      'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
+      '404.html',
+      'assets/test-app.css',
+      'assets/test-app.js',
+      'assets/vendor.css',
+      'assets/vendor.js',
+      'assets/vienna.jpg',
       'index.html',
       'page-1/index.html',
       'robots.txt',
     ]);
 
-    await fileIsExpected(outputPath, '_empty.html');
+    await fileIsExpected(outputPath, '404.html');
     await fileIsExpected(outputPath, 'index.html');
     await fileIsExpected(outputPath, 'page-1/index.html');
   });
@@ -88,12 +88,12 @@ describe('prerender command', function () {
     let files = glob.sync('**/*', { cwd: outputPath, nodir: true });
 
     expect(files).to.deep.equals([
-      '_empty.html',
-      'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/test-app-d26ef0cf73b7f17e2f0c18d954d66d03.js',
-      'assets/vendor-27db9ff083af01bb4870da9f5b388898.js',
-      'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
-      'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
+      '404.html',
+      'assets/test-app.css',
+      'assets/test-app.js',
+      'assets/vendor.css',
+      'assets/vendor.js',
+      'assets/vienna.jpg',
       'index.html',
       'numbers/1/index.html',
       'numbers/2/index.html',
@@ -106,7 +106,7 @@ describe('prerender command', function () {
       'robots.txt',
     ]);
 
-    await fileIsExpected(outputPath, '_empty.html');
+    await fileIsExpected(outputPath, '404.html');
     await fileIsExpected(outputPath, 'index.html');
     await fileIsExpected(outputPath, 'page-1/index.html');
     await fileIsExpected(outputPath, 'numbers/1/index.html');
@@ -128,18 +128,18 @@ describe('prerender command', function () {
     let files = glob.sync('**/*', { cwd: outputPath, nodir: true });
 
     expect(files).to.deep.equals([
-      '_empty.html',
-      'assets/test-app-98ee95eb6b847855c5a1fa354975f609.css',
-      'assets/test-app-d26ef0cf73b7f17e2f0c18d954d66d03.js',
-      'assets/vendor-27db9ff083af01bb4870da9f5b388898.js',
-      'assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css',
-      'assets/vienna-9891f9bec17a731c557125a4a3a2f7a4.jpg',
+      '404.html',
+      'assets/test-app.css',
+      'assets/test-app.js',
+      'assets/vendor.css',
+      'assets/vendor.js',
+      'assets/vienna.jpg',
       'index.html',
       'page-1/index.html',
       'robots.txt',
     ]);
 
-    await fileIsExpected(outputPath, '_empty.html');
+    await fileIsExpected(outputPath, '404.html');
     await fileIsExpected(outputPath, 'index.html');
     await fileIsExpected(outputPath, 'page-1/index.html');
   });
@@ -166,7 +166,7 @@ function getOptions(options = {}) {
       urlFetcher: undefined,
       viewportWidth: 1280,
       viewportHeight: 1024,
-      emptyFile: '_empty.html',
+      emptyFile: '404.html',
       indexFile: 'index.html',
       port: 7785,
     },

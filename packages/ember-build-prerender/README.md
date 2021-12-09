@@ -131,6 +131,21 @@ You can use an [ember-cli-deploy](http://ember-cli-deploy.com/) plugin for easy 
 
 [ember-cli-deploy-prerender](./../ember-cli-deploy-prerender/README.md) can be used as a mostly drop-in replacement for ember-cli-deploy-build.
 
+## Trying prerendering in development
+
+This addon does not have a true development integration as of now.
+To test the full prerendering flow, you can use the following:
+
+```bash
+# Prerender app with your desired settings - make sure to set empty file to 404.html
+ember prerender --empty-file="404.html"
+
+# Start local server
+npx http-server dist -c-1
+```
+
+This will start a local server in the prerendered `dist/` directory, which you can view under http://localhost:8080.
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.

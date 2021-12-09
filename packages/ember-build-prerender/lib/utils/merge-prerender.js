@@ -16,7 +16,7 @@ module.exports = async function mergePrerender({
   let emptyFileContent = await fs.readFile(emptyFilePath, 'utf-8');
   emptyFileContent = emptyFileContent.replace(
     '<meta name="prerender-config" content="should-prerender"></meta>',
-    ''
+    '<meta name="prerender-config" content="skip"></meta>'
   );
   await fs.writeFile(emptyFilePath, emptyFileContent, 'utf-8');
 

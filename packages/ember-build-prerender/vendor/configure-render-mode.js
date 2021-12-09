@@ -32,6 +32,11 @@
 
   let stage = configElement.getAttribute('content');
 
+  // This means we loaded the fallback file
+  if (stage === 'skip') {
+    return;
+  }
+
   if (stage === 'should-prerender') {
     configureRenderMode('serialize');
 
