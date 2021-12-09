@@ -3,6 +3,20 @@
 
 
 
+
+## v0.2.2 (2021-12-09)
+
+#### :bug: Bug Fix
+* `ember-build-prerender`, `test-app`
+  * [#14](https://github.com/mydea/ember-prerender/pull/14) Fix fallback page ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* `ember-build-prerender`, `ember-cli-deploy-prerender`, `test-app`
+  * [#15](https://github.com/mydea/ember-prerender/pull/15) Update & streamline all dev dependencies ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v0.2.1 (2021-12-07)
 
 #### :bug: Bug Fix
