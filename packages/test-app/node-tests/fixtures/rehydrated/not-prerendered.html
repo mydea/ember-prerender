@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 <meta name="test-app/config/environment" content="%7B%22modulePrefix%22%3A%22test-app%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%7D%2C%22exportApplicationGlobal%22%3Afalse%7D">
-<meta name="prerender-config" content="prerender">
+<meta name="prerender-config" content="skip">
 <meta name="prerender-shoebox" content="{}">
 
     <link integrity="" rel="stylesheet" href="/assets/vendor.css">
@@ -14,7 +14,7 @@
 
     
   </head>
-  <body class="">
+  <body class="ember-application">
     
 
     <script src="/assets/vendor.js"></script>
@@ -23,16 +23,34 @@
     
   
 
-<!--%+b:0%--><!--%+b:1%--><!--%+b:2%--><!--%+b:3%--><!--%+b:4%--><!--%+b:5%--><!--% %--><!--%-b:5%-->
+
 
 <h1>
   Welcome to the Prerender Test App
 </h1>
 
-<!--%+b:5%--><!--%+b:6%--><h2>Numbers</h2>
+<h2>Not prerendered page</h2>
 
-<!--%+b:7%--><!--%+b:8%--><h3>Number <!--%+b:9%-->3<!--%-b:9%--></h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.
+  </p>
+
 
 <p>
-  <!--%+b:9%--><!--%+b:10%--><a id="ember4" class="ember-view" href="/">Back to index</a><!--%-b:10%--><!--%-b:9%-->
-</p><!--%-b:8%--><!--%-b:7%--><!--%-b:6%--><!--%-b:5%--><!--%-b:4%--><!--%-b:3%--><!--%-b:2%--><!--%-b:1%--><!--%-b:0%--></body></html>
+  <a id="ember4" class="ember-view" href="/">Back to index</a>
+</p></body></html>
