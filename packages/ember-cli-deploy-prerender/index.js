@@ -74,11 +74,11 @@ module.exports = {
 
         if (files && files.length) {
           files.forEach(function (path) {
-            this.log('✔  ' + path, { verbose: true });
+            this.ui.log('✔  ' + path, { verbose: true });
           });
         }
 
-        this.log('build ok', { verbose: true });
+        this.ui.log('build ok', { verbose: true });
 
         return {
           distDir: outputPath,
