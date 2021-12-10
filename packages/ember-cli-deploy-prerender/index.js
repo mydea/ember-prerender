@@ -73,12 +73,12 @@ module.exports = {
         });
 
         if (files && files.length) {
-          files.forEach(function (path) {
-            this.ui.log('✔  ' + path, { verbose: true });
+          files.forEach((path) => {
+            this.log('✔  ' + path, { verbose: true });
           });
         }
 
-        this.ui.log('build ok', { verbose: true });
+        this.log('build ok', { verbose: true });
 
         return {
           distDir: outputPath,
