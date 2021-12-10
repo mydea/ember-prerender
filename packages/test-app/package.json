@@ -1,6 +1,6 @@
 {
   "name": "test-app",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": true,
   "description": "A test app to test prerendering.",
   "repository": "",
@@ -28,7 +28,7 @@
     "broccoli-asset-rev": "~3.0.0",
     "chai": "~4.3.4",
     "ember-auto-import": "~2.2.4",
-    "ember-build-prerender": "0.2.3",
+    "ember-build-prerender": "0.2.4",
     "ember-cli": "~3.28.4",
     "ember-cli-babel": "~7.26.6",
     "ember-cli-dependency-checker": "~3.2.0",
