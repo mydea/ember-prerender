@@ -4,6 +4,16 @@
 
 
 
+
+## v0.2.3 (2021-12-10)
+
+#### :bug: Bug Fix
+* `ember-cli-deploy-prerender`
+  * [#16](https://github.com/mydea/ember-prerender/pull/16) Fix deploy plugin logging ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v0.2.2 (2021-12-09)
 
 #### :bug: Bug Fix

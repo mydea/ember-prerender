@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-prerender",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A plugin for ember-cli-deploy to prerender pages as static HTML.",
   "keywords": [
     "ember-addon",
@@ -20,7 +20,7 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "ember-cli-deploy-plugin": "^0.2.1",
-    "ember-build-prerender": "0.2.2",
+    "ember-build-prerender": "0.2.3",
     "glob": "^7.2.0"
   },
   "devDependencies": {
