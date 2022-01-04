@@ -33,7 +33,10 @@ module.exports = {
         let port = this.readConfig('port');
         let viewportWidth = this.readConfig('viewportWidth');
         let viewportHeight = this.readConfig('viewportHeight');
-        let urlFetcher = this.readConfig('urlFetcher');
+
+        // This is supposed to be a function, so we cannot use readConfig() here
+        // As this will evaluate the function at runtime and take the function return value
+        let urlFetcher = this.pluginConfig.urlFetcher || undefined;
 
         let Builder = this.project.require('ember-cli/lib/models/builder');
 
