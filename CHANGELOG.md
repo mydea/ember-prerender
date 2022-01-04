@@ -7,6 +7,16 @@
 
 
 
+
+## v0.3.1 (2022-01-04)
+
+#### :bug: Bug Fix
+* `ember-cli-deploy-prerender`
+  * [#24](https://github.com/mydea/ember-prerender/pull/24) Ensure urlFetcher is properly passed in deploy plugin ([@mydea](https://github.com/mydea))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v0.3.0 (2022-01-04)
 
 #### :house: Internal
