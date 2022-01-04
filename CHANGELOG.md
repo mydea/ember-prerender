@@ -6,6 +6,15 @@
 
 
 
+
+## v0.3.0 (2022-01-04)
+
+#### :house: Internal
+* `ember-build-prerender`, `ember-cli-deploy-prerender`, `test-app`
+  * [#23](https://github.com/mydea/ember-prerender/pull/23) chore(deps-dev): bump ember-cli from 3.28.4 to 4.1.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* `ember-build-prerender`
+  * [#22](https://github.com/mydea/ember-prerender/pull/22) chore(deps): bump puppeteer from 12.0.1 to 13.0.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+
 ## v0.2.4 (2021-12-10)
 
 #### :bug: Bug Fix
