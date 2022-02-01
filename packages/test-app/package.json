@@ -27,7 +27,7 @@
     "@glimmer/tracking": "~1.0.4",
     "broccoli-asset-rev": "~3.0.0",
     "chai": "~4.3.4",
-    "ember-auto-import": "~2.2.4",
+    "ember-auto-import": "~2.4.0",
     "ember-build-prerender": "0.3.1",
     "ember-cli": "~4.1.0",
     "ember-cli-babel": "~7.26.11",
