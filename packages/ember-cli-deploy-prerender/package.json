@@ -18,7 +18,7 @@
     "test": "mocha tests/**/*-test.js --exit"
   },
   "dependencies": {
-    "chalk": "^1.0.0",
+    "chalk": "^5.0.0",
     "ember-cli-deploy-plugin": "^0.2.1",
     "ember-build-prerender": "0.3.1",
     "glob": "^7.2.0"
