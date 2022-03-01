@@ -18,7 +18,7 @@
     "ember-cli-babel": "^7.26.11",
     "fs-extra": "^10.0.0",
     "http-server": "^14.0.0",
-    "puppeteer": "^13.0.1"
+    "puppeteer": "^13.4.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "~7.16.3",
