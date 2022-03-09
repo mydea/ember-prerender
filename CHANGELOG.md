@@ -8,6 +8,23 @@
 
 
 
+
+## v0.3.2 (2022-03-09)
+
+#### :bug: Bug Fix
+* `ember-build-prerender`, `test-app`
+  * [#45](https://github.com/mydea/ember-prerender/pull/45) Ensure empty file prerender state works no matter how meta tag looks ([@mydea](https://github.com/mydea))
+
+#### :house: Internal
+* `ember-build-prerender`, `test-app`
+  * [#44](https://github.com/mydea/ember-prerender/pull/44) Update dev dependencies ([@mydea](https://github.com/mydea))
+* `ember-build-prerender`
+  * [#33](https://github.com/mydea/ember-prerender/pull/33) chore(deps): bump http-server from 14.0.0 to 14.1.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+  * [#40](https://github.com/mydea/ember-prerender/pull/40) chore(deps): bump puppeteer from 13.0.1 to 13.4.1 ([@dependabot[bot]](https://github.com/apps/dependabot))
+
+#### Committers: 1
+- Francesco Novy ([@mydea](https://github.com/mydea))
+
 ## v0.3.1 (2022-01-04)
 
 #### :bug: Bug Fix

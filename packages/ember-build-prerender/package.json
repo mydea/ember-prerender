@@ -1,6 +1,6 @@
 {
   "name": "ember-build-prerender",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Prerender Ember pages with Puppeeter.",
   "keywords": [
     "ember-addon"
