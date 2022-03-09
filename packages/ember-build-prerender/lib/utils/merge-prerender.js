@@ -1,4 +1,5 @@
 const fs = require('fs-extra');
+const fixPrerenderInEmptyFile = require('./fix-prerender-in-empty-file');
 const path = require('path');
 
 module.exports = async function mergePrerender({
@@ -14,10 +15,8 @@ module.exports = async function mergePrerender({
 
   // Remove prerender config from empty file
   let emptyFileContent = await fs.readFile(emptyFilePath, 'utf-8');
-  emptyFileContent = emptyFileContent.replace(
-    '<meta name="prerender-config" content="should-prerender"></meta>',
-    '<meta name="prerender-config" content="skip"></meta>'
-  );
+  emptyFileContent = fixPrerenderInEmptyFile(emptyFileContent);
+
   await fs.writeFile(emptyFilePath, emptyFileContent, 'utf-8');
 
   await fs.remove(buildDir);
