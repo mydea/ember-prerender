@@ -29,7 +29,7 @@
     "chai": "~4.3.4",
     "ember-auto-import": "~2.4.0",
     "ember-build-prerender": "0.3.2",
-    "ember-cli": "~4.1.0",
+    "ember-cli": "~4.2.0",
     "ember-cli-babel": "~7.26.11",
     "ember-cli-dependency-checker": "~3.2.0",
     "ember-cli-htmlbars": "~6.0.1",
