@@ -24,7 +24,7 @@
     "glob": "^7.2.0"
   },
   "devDependencies": {
-    "ember-cli": "~4.1.0"
+    "ember-cli": "~4.10.0"
   },
   "engines": {
     "node": "14.* || >= 16"
