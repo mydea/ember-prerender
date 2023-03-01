@@ -21,7 +21,7 @@
     "chalk": "^1.0.0",
     "ember-cli-deploy-plugin": "^0.2.1",
     "ember-build-prerender": "0.3.2",
-    "glob": "^7.2.0"
+    "glob": "^9.1.0"
   },
   "devDependencies": {
     "ember-cli": "~4.1.0"
